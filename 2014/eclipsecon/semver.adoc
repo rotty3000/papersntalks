@@ -1,0 +1,34 @@
+Case Study - **Semantic Versioning A Large Existing Codebase**
+==============================================================
+Raymond Augé - @rotty3000 - <rotty3000@gmail.com>
+:title: Case Study - Semantic Versioning A Large Existing Codebase
+:description: Presentation at EclipseCon 2014
+:customcss: mycss.css
+:data-uri:
+:dzslides-fonts: family=Voces:400
+:dzslides-style: eclipsecon
+:dzslides-transition: fade
+:dzslides-highlight: github
+:hardbreaks:
+:imagesdir: images
+:linkcss:
+:source-highlighter: highlightjs
+
+[.topic.intro]
+
+== The Scenario
+
+This is some normal text.
+
+[source,java]
+----
+if (true) {
+	System.out.println("Hello World!")  <1>
+}
+----
+
+<1> This line should do something cool!
+
+[.topic.ending]
+
+== Thank You!
