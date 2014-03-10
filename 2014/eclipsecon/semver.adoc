@@ -1,26 +1,75 @@
-Case Study - **Semantic Versioning A Large Existing Codebase**
-==============================================================
-Raymond Augé - @rotty3000 - <rotty3000@gmail.com>
+# icon:folder-open[] Case Study
+Raymond Augé (@rotty3000) <raymond.auge@liferay.com>
+:icons: font
+:toc: right
 :title: Case Study - Semantic Versioning A Large Existing Codebase
 :description: Presentation at EclipseCon 2014
-:customcss: mycss.css
-:data-uri:
-:dzslides-fonts: family=Voces:400
-:dzslides-style: eclipsecon
-:dzslides-transition: fade
-:dzslides-highlight: github
-:hardbreaks:
-:imagesdir: images
-:linkcss:
-:source-highlighter: highlightjs
+
+## **Semantic Versioning A Large Existing Codebase**
 
 [.topic.intro]
+== icon:user[] The main character
 
-== The Scenario
+Contextualize...
 
-This is some normal text.
+* portal software
+* product company
+* un-funded
+* more than a thousand clients
 
+<<<
+
+== icon:bar-chart[] The situation
+
+* organic growth
+* large number of developers
+* years of effort
+* millions of lines of code
+* single software repository
+* _effectively_ single artifact
+* thousands of features
+
+<<<
+
+== icon:warning[] The problem(s)
+
+* breaking API
+* binary patching
+
+<<<
+
+== The solution
+
+* Semantic Versioning
+** OSGi Alliance definition
+
+<<<
+
+== The available tools
+
+* BND
+
+<<<
+
+== The adaptations
+
+* Make it work for us
+
+<<<
+
+== The conclusion
+
+* Is it working?
+
+<<<
+
+[.topic.ending]
+== Thank You!
+
+
+////
 [source,java]
+.Test.java
 ----
 if (true) {
 	System.out.println("Hello World!")  <1>
@@ -28,7 +77,4 @@ if (true) {
 ----
 
 <1> This line should do something cool!
-
-[.topic.ending]
-
-== Thank You!
+////
