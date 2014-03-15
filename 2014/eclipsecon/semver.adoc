@@ -1,16 +1,26 @@
 # icon:folder-open[] Case Study
-Raymond Augé (@rotty3000) <raymond.auge@liferay.com>
+Raymond Augé <raymond.auge@liferay.com>
 :icons: font
-:toc: right
 :title: Case Study - Semantic Versioning A Large Existing Codebase
 :description: Presentation at EclipseCon 2014
+:hashtags: #eclipsecon #semver
+:twitter: @rotty3000
 
-## **Semantic Versioning A Large Existing Codebase**
+[.subtitle]
+**Semantic Versioning A Large Existing Codebase**
 
-[.topic.intro]
+**{author}** +
+EclipseCon 2014
+
+**{twitter} | {hashtags}**
+
+<<<
+
 == icon:user[] The main character
 
-Contextualize...
+The project in question, **Liferay Portal**, is a very large, single repository,
+open source application. The project is maintained by a small (sub 500 employee)
+company **Liferay, Inc.**
 
 * portal software
 * product company
@@ -19,10 +29,11 @@ Contextualize...
 
 <<<
 
-== icon:bar-chart[] The situation
+== icon:gears[] The situation
 
 * organic growth
 * large number of developers
+** wide range of skill levels
 * years of effort
 * millions of lines of code
 * single software repository
@@ -31,41 +42,86 @@ Contextualize...
 
 <<<
 
-== icon:warning[] The problem(s)
+== icon:warning-sign[] The problem(s)
 
 * breaking API
 * binary patching
+* monolithic upgrades
+* no feature updates
 
 <<<
 
-== The solution
+== icon:puzzle-piece[] The solution
 
-* Semantic Versioning
-** OSGi Alliance definition
+Rather a very significant part of the solution is Semantic Versioning.
+
+* OSGi Alliance Semantic Versioning whitepaper
+** http://www.osgi.org/wiki/uploads/Links/SemanticVersioning.pdf
+* lots of work, who's going to do it?
 
 <<<
 
-== The available tools
+== icon:wrench[] The available tools
+
+The key to semantic versioning is in the tooling.
+
+* human versioning is biased, error prone and boring but essential
+* let machines do most of the work
 
 * BND
+** http://www.aqute.biz/Bnd/Bnd
+** http://bndtools.org/
+* http://www.aqute.biz/Bnd/Versioning
+* built tool support
+* show a pure example of baseline feature
+
+```
+java -jar biz.aQute.bnd-latest.jar baseline -d ./biz.aQute.bnd-latest.jar /other/bnd.jar
+```
+
+```
+===============================================================
+  biz.aQute.bnd 2.3.0.20140315-151701-2.2.0.20131017-210830
+===============================================================
+  Package                                            Delta      New        Old        Suggest    If Prov.
+  aQute.bnd.build                                    MINOR      2.3.0      2.2.0      ok         -
+  aQute.bnd.header                                   MINOR      1.3.0      1.2.0      ok         -
+  aQute.bnd.osgi                                     MINOR      2.2.0      2.1.3      ok         -
+  aQute.bnd.service.classparser                      ADDED      1.0.0      -          ok         -
+  aQute.bnd.service.extension                        ADDED      1.0.0      -          ok         -
+  aQute.bnd.service.phases                           ADDED      1.0.0      -          ok         -
+  aQute.bnd.service.repository                       MINOR      1.3.0      1.1.0      ok         -
+  aQute.bnd.service.url                              MINOR      1.2.0      1.1.0      ok         -
+  aQute.bnd.version                                  MINOR      1.1.0      1.0.0      ok         -
+```
 
 <<<
 
-== The adaptations
+== icon:crop[] The adaptations
 
-* Make it work for us
+Is this enough information for the least experienced developers to understand
+how things get broken?
+
+* make it work for us
+** the BND library does and intense analysis including exceptionally detailed
+analytics about APIs.
+* show the integration / report
+* even basic BND is useful
 
 <<<
 
-== The conclusion
+== icon:exclamation[] The conclusion
 
-* Is it working?
+* do we have semantic versioning
+* has helped
+* what does the future look like
 
 <<<
+
+== icon:power-off[] Thank You!
 
 [.topic.ending]
-== Thank You!
-
+=== Questions?
 
 ////
 [source,java]
@@ -78,3 +134,6 @@ if (true) {
 
 <1> This line should do something cool!
 ////
+
+[#footer]
+**@rotty3000 | #eclisecon #semver**
