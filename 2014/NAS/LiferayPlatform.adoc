@@ -1,0 +1,173 @@
+# icon:folder-open[] Liferay's Platform
+Raymond Augé <raymond.auge@liferay.com>
+:icons: font
+:title: Liferay's Platform: A New and Exciting Vision
+:description: Presentation at North American Symposium 2014
+:hashtags: #lrnas2014 #liferayplatform
+:twitter: @rotty3000
+
+[.subtitle]
+**A New and Exciting Vision**
+
+|===
+|**{author}**
+|**icon:twitter[] {twitter} \| {hashtags}**
+|===
+
+<<<
+
+== icon:th-list[] Outline
+
+[cols="2*"]
+|===
+|
+icon:angle-right[] Core Values +
+icon:angle-right[] Baseline Services +
+icon:angle-right[] Canned Features +
+icon:angle-right[] Special Initiatives +
+icon:angle-right[] Well Established Initiatives +
+icon:angle-right[] New Initiatives +
+|
+icon:angle-right[] Modularization +
+icon:angle-right[] Single Page Applications +
+icon:angle-right[] Liferay Screens +
+icon:angle-right[] Standalone Applications +
+icon:angle-right[] Services +
+icon:angle-right[] Tools +
+icon:angle-right[] Conclusion
+|===
+
+<<<
+
+== icon:th-list[] Core Values
+
+Technologically, Liferay Portal is founded on a set of core values which allow
+for a wide range of concerns to be checked off requirements lists. These alone
+can give you considerable head start toward a project's goals.
+
+* database agnostic
+* application server agnostic
+* standard integrations
+
+<<<
+
+== icon:th-list[] Baseline Services
+
+On top those core values Liferay built an extremely useful set baseline
+services, eliminating the need for projects to get caught up in their mundane,
+uninspiring implementation. Liferay provides management of:
+
+* users
+* organizations
+* permissions
+* configuration
+* sites
+* pages
+* page layout
+
+<<<
+
+== icon:th-list[] Canned Features
+
+Add to this many canned features which the stock product provides.
+
+* Web Content
+* Documents & Media
+* Collaboration
+* Workflow
+* Staging
+
+<<<
+
+== icon:th-list[] Special Initiatives
+
+At one point Liferay began to be (_as any reasonably sized engineering team
+eventually is_) faced with the issue that many of it's technologies could be
+better _enabled_ by formalizing a initiative specific to them.
+
+These initiatives sprout up (_often informally_) when a specific technology
+requires either a significant number of dedicated individuals, is managed as
+separate code repositories, requires a significant amount of independent
+knowledge management or any combination of these.
+
+This is what I'm collectively calling **Special Initiatives**.
+
+<<<
+
+== icon:th-list[] Well Established Initiatives
+
+* AlloyUI
+* Liferay Faces
+* Mobile SDK
+
+<<<
+
+== icon:th-list[] New Initiatives
+
+Recently, 3 new initiatives have been started.
+
+* Single Page Applications
+* Liferay Screens
+* Standalone Applications
+
+<<<
+
+== icon:th-list[] Single Page Applications
+
+* blah
+
+<<<
+
+== icon:th-list[] Liferay Screens
+
+* blah
+
+<<<
+
+== icon:th-list[] Standalone Applications
+
+* leverage existing skill set
+* embrace polyglot
+* break from portlet model
+* break from portal UI model
+
+<<<
+
+== icon:th-list[] Services
+
+Services are the glue linking all of these initiatives together. Whether local
+or remote, contracts based on services offer the most flexible and maintainable
+programing model for loosely coupled and dynamic modules.
+
+<<<
+
+== icon:th-list[] Tools
+
+We're expanding our tooling goals toward being IDE agnostic with a heavy focus
+on reusable components.
+
+* Rely much more on industry provided tools (outreach to external projects)
+* Create small reusable Liferay specific tools (attract interest)
+* Enable assembly in order to satisfy many more needs
+* [big]**DON'T STOP AT 80%**
+
+<<<
+
+== icon:th-list[] Conclusion
+
+Liferay has long embraced polyglot development (_even before it was a thing_)
+and we're taking measures to ensure this is properly enabled within the
+platform.
+
+Our current strategy is driven by the desire to provide developers with the very
+best experience possible; enabling their already considerable knowledge to be
+**_losslessly_** transitioned onto the Liferay platform ensuring the most cost
+effective use of talent.
+
+A Personal mission to **Make Developers Happy!!!**
+
+<<<
+
+== icon:th-list[] Thank you!
+
+[big]#Questions?#
