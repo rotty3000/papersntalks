@@ -1,0 +1,552 @@
+= Fontawesome Icons
+
+[.huge]
+icon:adjust[] adjust [&#xf042;] +
+icon:adn[] adn [&#xf170;] +
+icon:align-center[] align-center [&#xf037;] +
+icon:align-justify[] align-justify [&#xf039;] +
+icon:align-left[] align-left [&#xf036;] +
+icon:align-right[] align-right [&#xf038;] +
+icon:ambulance[] ambulance [&#xf0f9;] +
+icon:anchor[] anchor [&#xf13d;] +
+icon:android[] android [&#xf17b;] +
+icon:angellist[] angellist [&#xf209;] +
+icon:angle-double-down[] angle-double-down [&#xf103;] +
+icon:angle-double-left[] angle-double-left [&#xf100;] +
+icon:angle-double-right[] angle-double-right [&#xf101;] +
+icon:angle-double-up[] angle-double-up [&#xf102;] +
+icon:angle-down[] angle-down [&#xf107;] +
+icon:angle-left[] angle-left [&#xf104;] +
+icon:angle-right[] angle-right [&#xf105;] +
+icon:angle-up[] angle-up [&#xf106;] +
+icon:apple[] apple [&#xf179;] +
+icon:archive[] archive [&#xf187;] +
+icon:area-chart[] area-chart [&#xf1fe;] +
+icon:arrow-circle-down[] arrow-circle-down [&#xf0ab;] +
+icon:arrow-circle-left[] arrow-circle-left [&#xf0a8;] +
+icon:arrow-circle-o-down[] arrow-circle-o-down [&#xf01a;] +
+icon:arrow-circle-o-left[] arrow-circle-o-left [&#xf190;] +
+icon:arrow-circle-o-right[] arrow-circle-o-right [&#xf18e;] +
+icon:arrow-circle-o-up[] arrow-circle-o-up [&#xf01b;] +
+icon:arrow-circle-right[] arrow-circle-right [&#xf0a9;] +
+icon:arrow-circle-up[] arrow-circle-up [&#xf0aa;] +
+icon:arrow-down[] arrow-down [&#xf063;] +
+icon:arrow-left[] arrow-left [&#xf060;] +
+icon:arrow-right[] arrow-right [&#xf061;] +
+icon:arrow-up[] arrow-up [&#xf062;] +
+icon:arrows[] arrows [&#xf047;] +
+icon:arrows-alt[] arrows-alt [&#xf0b2;] +
+icon:arrows-h[] arrows-h [&#xf07e;] +
+icon:arrows-v[] arrows-v [&#xf07d;] +
+icon:asterisk[] asterisk [&#xf069;] +
+icon:at[] at [&#xf1fa;] +
+icon:automobile (alias)[] automobile (alias) [&#xf1b9;] +
+icon:backward[] backward [&#xf04a;] +
+icon:ban[] ban [&#xf05e;] +
+icon:bank (alias)[] bank (alias) [&#xf19c;] +
+icon:bar-chart[] bar-chart [&#xf080;] +
+icon:bar-chart-o (alias)[] bar-chart-o (alias) [&#xf080;] +
+icon:barcode[] barcode [&#xf02a;] +
+icon:bars[] bars [&#xf0c9;] +
+icon:beer[] beer [&#xf0fc;] +
+icon:behance[] behance [&#xf1b4;] +
+icon:behance-square[] behance-square [&#xf1b5;] +
+icon:bell[] bell [&#xf0f3;] +
+icon:bell-o[] bell-o [&#xf0a2;] +
+icon:bell-slash[] bell-slash [&#xf1f6;] +
+icon:bell-slash-o[] bell-slash-o [&#xf1f7;] +
+icon:bicycle[] bicycle [&#xf206;] +
+icon:binoculars[] binoculars [&#xf1e5;] +
+icon:birthday-cake[] birthday-cake [&#xf1fd;] +
+icon:bitbucket[] bitbucket [&#xf171;] +
+icon:bitbucket-square[] bitbucket-square [&#xf172;] +
+icon:bitcoin (alias)[] bitcoin (alias) [&#xf15a;] +
+icon:bold[] bold [&#xf032;] +
+icon:bolt[] bolt [&#xf0e7;] +
+icon:bomb[] bomb [&#xf1e2;] +
+icon:book[] book [&#xf02d;] +
+icon:bookmark[] bookmark [&#xf02e;] +
+icon:bookmark-o[] bookmark-o [&#xf097;] +
+icon:briefcase[] briefcase [&#xf0b1;] +
+icon:btc[] btc [&#xf15a;] +
+icon:bug[] bug [&#xf188;] +
+icon:building[] building [&#xf1ad;] +
+icon:building-o[] building-o [&#xf0f7;] +
+icon:bullhorn[] bullhorn [&#xf0a1;] +
+icon:bullseye[] bullseye [&#xf140;] +
+icon:bus[] bus [&#xf207;] +
+icon:cab (alias)[] cab (alias) [&#xf1ba;] +
+icon:calculator[] calculator [&#xf1ec;] +
+icon:calendar[] calendar [&#xf073;] +
+icon:calendar-o[] calendar-o [&#xf133;] +
+icon:camera[] camera [&#xf030;] +
+icon:camera-retro[] camera-retro [&#xf083;] +
+icon:car[] car [&#xf1b9;] +
+icon:caret-down[] caret-down [&#xf0d7;] +
+icon:caret-left[] caret-left [&#xf0d9;] +
+icon:caret-right[] caret-right [&#xf0da;] +
+icon:caret-square-o-down[] caret-square-o-down [&#xf150;] +
+icon:caret-square-o-left[] caret-square-o-left [&#xf191;] +
+icon:caret-square-o-right[] caret-square-o-right [&#xf152;] +
+icon:caret-square-o-up[] caret-square-o-up [&#xf151;] +
+icon:caret-up[] caret-up [&#xf0d8;] +
+icon:cc[] cc [&#xf20a;] +
+icon:cc-amex[] cc-amex [&#xf1f3;] +
+icon:cc-discover[] cc-discover [&#xf1f2;] +
+icon:cc-mastercard[] cc-mastercard [&#xf1f1;] +
+icon:cc-paypal[] cc-paypal [&#xf1f4;] +
+icon:cc-stripe[] cc-stripe [&#xf1f5;] +
+icon:cc-visa[] cc-visa [&#xf1f0;] +
+icon:certificate[] certificate [&#xf0a3;] +
+icon:chain (alias)[] chain (alias) [&#xf0c1;] +
+icon:chain-broken[] chain-broken [&#xf127;] +
+icon:check[] check [&#xf00c;] +
+icon:check-circle[] check-circle [&#xf058;] +
+icon:check-circle-o[] check-circle-o [&#xf05d;] +
+icon:check-square[] check-square [&#xf14a;] +
+icon:check-square-o[] check-square-o [&#xf046;] +
+icon:chevron-circle-down[] chevron-circle-down [&#xf13a;] +
+icon:chevron-circle-left[] chevron-circle-left [&#xf137;] +
+icon:chevron-circle-right[] chevron-circle-right [&#xf138;] +
+icon:chevron-circle-up[] chevron-circle-up [&#xf139;] +
+icon:chevron-down[] chevron-down [&#xf078;] +
+icon:chevron-left[] chevron-left [&#xf053;] +
+icon:chevron-right[] chevron-right [&#xf054;] +
+icon:chevron-up[] chevron-up [&#xf077;] +
+icon:child[] child [&#xf1ae;] +
+icon:circle[] circle [&#xf111;] +
+icon:circle-o[] circle-o [&#xf10c;] +
+icon:circle-o-notch[] circle-o-notch [&#xf1ce;] +
+icon:circle-thin[] circle-thin [&#xf1db;] +
+icon:clipboard[] clipboard [&#xf0ea;] +
+icon:clock-o[] clock-o [&#xf017;] +
+icon:close (alias)[] close (alias) [&#xf00d;] +
+icon:cloud[] cloud [&#xf0c2;] +
+icon:cloud-download[] cloud-download [&#xf0ed;] +
+icon:cloud-upload[] cloud-upload [&#xf0ee;] +
+icon:cny (alias)[] cny (alias) [&#xf157;] +
+icon:code[] code [&#xf121;] +
+icon:code-fork[] code-fork [&#xf126;] +
+icon:codepen[] codepen [&#xf1cb;] +
+icon:coffee[] coffee [&#xf0f4;] +
+icon:cog[] cog [&#xf013;] +
+icon:cogs[] cogs [&#xf085;] +
+icon:columns[] columns [&#xf0db;] +
+icon:comment[] comment [&#xf075;] +
+icon:comment-o[] comment-o [&#xf0e5;] +
+icon:comments[] comments [&#xf086;] +
+icon:comments-o[] comments-o [&#xf0e6;] +
+icon:compass[] compass [&#xf14e;] +
+icon:compress[] compress [&#xf066;] +
+icon:copy (alias)[] copy (alias) [&#xf0c5;] +
+icon:copyright[] copyright [&#xf1f9;] +
+icon:credit-card[] credit-card [&#xf09d;] +
+icon:crop[] crop [&#xf125;] +
+icon:crosshairs[] crosshairs [&#xf05b;] +
+icon:css3[] css3 [&#xf13c;] +
+icon:cube[] cube [&#xf1b2;] +
+icon:cubes[] cubes [&#xf1b3;] +
+icon:cut (alias)[] cut (alias) [&#xf0c4;] +
+icon:cutlery[] cutlery [&#xf0f5;] +
+icon:dashboard (alias)[] dashboard (alias) [&#xf0e4;] +
+icon:database[] database [&#xf1c0;] +
+icon:dedent (alias)[] dedent (alias) [&#xf03b;] +
+icon:delicious[] delicious [&#xf1a5;] +
+icon:desktop[] desktop [&#xf108;] +
+icon:deviantart[] deviantart [&#xf1bd;] +
+icon:digg[] digg [&#xf1a6;] +
+icon:dollar (alias)[] dollar (alias) [&#xf155;] +
+icon:dot-circle-o[] dot-circle-o [&#xf192;] +
+icon:download[] download [&#xf019;] +
+icon:dribbble[] dribbble [&#xf17d;] +
+icon:dropbox[] dropbox [&#xf16b;] +
+icon:drupal[] drupal [&#xf1a9;] +
+icon:edit (alias)[] edit (alias) [&#xf044;] +
+icon:eject[] eject [&#xf052;] +
+icon:ellipsis-h[] ellipsis-h [&#xf141;] +
+icon:ellipsis-v[] ellipsis-v [&#xf142;] +
+icon:empire[] empire [&#xf1d1;] +
+icon:envelope[] envelope [&#xf0e0;] +
+icon:envelope-o[] envelope-o [&#xf003;] +
+icon:envelope-square[] envelope-square [&#xf199;] +
+icon:eraser[] eraser [&#xf12d;] +
+icon:eur[] eur [&#xf153;] +
+icon:euro (alias)[] euro (alias) [&#xf153;] +
+icon:exchange[] exchange [&#xf0ec;] +
+icon:exclamation[] exclamation [&#xf12a;] +
+icon:exclamation-circle[] exclamation-circle [&#xf06a;] +
+icon:exclamation-triangle[] exclamation-triangle [&#xf071;] +
+icon:expand[] expand [&#xf065;] +
+icon:external-link[] external-link [&#xf08e;] +
+icon:external-link-square[] external-link-square [&#xf14c;] +
+icon:eye[] eye [&#xf06e;] +
+icon:eye-slash[] eye-slash [&#xf070;] +
+icon:eyedropper[] eyedropper [&#xf1fb;] +
+icon:facebook[] facebook [&#xf09a;] +
+icon:facebook-square[] facebook-square [&#xf082;] +
+icon:fast-backward[] fast-backward [&#xf049;] +
+icon:fast-forward[] fast-forward [&#xf050;] +
+icon:fax[] fax [&#xf1ac;] +
+icon:female[] female [&#xf182;] +
+icon:fighter-jet[] fighter-jet [&#xf0fb;] +
+icon:file[] file [&#xf15b;] +
+icon:file-archive-o[] file-archive-o [&#xf1c6;] +
+icon:file-audio-o[] file-audio-o [&#xf1c7;] +
+icon:file-code-o[] file-code-o [&#xf1c9;] +
+icon:file-excel-o[] file-excel-o [&#xf1c3;] +
+icon:file-image-o[] file-image-o [&#xf1c5;] +
+icon:file-movie-o (alias)[] file-movie-o (alias) [&#xf1c8;] +
+icon:file-o[] file-o [&#xf016;] +
+icon:file-pdf-o[] file-pdf-o [&#xf1c1;] +
+icon:file-photo-o (alias)[] file-photo-o (alias) [&#xf1c5;] +
+icon:file-picture-o (alias)[] file-picture-o (alias) [&#xf1c5;] +
+icon:file-powerpoint-o[] file-powerpoint-o [&#xf1c4;] +
+icon:file-sound-o (alias)[] file-sound-o (alias) [&#xf1c7;] +
+icon:file-text[] file-text [&#xf15c;] +
+icon:file-text-o[] file-text-o [&#xf0f6;] +
+icon:file-video-o[] file-video-o [&#xf1c8;] +
+icon:file-word-o[] file-word-o [&#xf1c2;] +
+icon:file-zip-o (alias)[] file-zip-o (alias) [&#xf1c6;] +
+icon:files-o[] files-o [&#xf0c5;] +
+icon:film[] film [&#xf008;] +
+icon:filter[] filter [&#xf0b0;] +
+icon:fire[] fire [&#xf06d;] +
+icon:fire-extinguisher[] fire-extinguisher [&#xf134;] +
+icon:flag[] flag [&#xf024;] +
+icon:flag-checkered[] flag-checkered [&#xf11e;] +
+icon:flag-o[] flag-o [&#xf11d;] +
+icon:flash (alias)[] flash (alias) [&#xf0e7;] +
+icon:flask[] flask [&#xf0c3;] +
+icon:flickr[] flickr [&#xf16e;] +
+icon:floppy-o[] floppy-o [&#xf0c7;] +
+icon:folder[] folder [&#xf07b;] +
+icon:folder-o[] folder-o [&#xf114;] +
+icon:folder-open[] folder-open [&#xf07c;] +
+icon:folder-open-o[] folder-open-o [&#xf115;] +
+icon:font[] font [&#xf031;] +
+icon:forward[] forward [&#xf04e;] +
+icon:foursquare[] foursquare [&#xf180;] +
+icon:frown-o[] frown-o [&#xf119;] +
+icon:futbol-o[] futbol-o [&#xf1e3;] +
+icon:gamepad[] gamepad [&#xf11b;] +
+icon:gavel[] gavel [&#xf0e3;] +
+icon:gbp[] gbp [&#xf154;] +
+icon:ge (alias)[] ge (alias) [&#xf1d1;] +
+icon:gear (alias)[] gear (alias) [&#xf013;] +
+icon:gears (alias)[] gears (alias) [&#xf085;] +
+icon:gift[] gift [&#xf06b;] +
+icon:git[] git [&#xf1d3;] +
+icon:git-square[] git-square [&#xf1d2;] +
+icon:github[] github [&#xf09b;] +
+icon:github-alt[] github-alt [&#xf113;] +
+icon:github-square[] github-square [&#xf092;] +
+icon:gittip[] gittip [&#xf184;] +
+icon:glass[] glass [&#xf000;] +
+icon:globe[] globe [&#xf0ac;] +
+icon:google[] google [&#xf1a0;] +
+icon:google-plus[] google-plus [&#xf0d5;] +
+icon:google-plus-square[] google-plus-square [&#xf0d4;] +
+icon:google-wallet[] google-wallet [&#xf1ee;] +
+icon:graduation-cap[] graduation-cap [&#xf19d;] +
+icon:group (alias)[] group (alias) [&#xf0c0;] +
+icon:h-square[] h-square [&#xf0fd;] +
+icon:hacker-news[] hacker-news [&#xf1d4;] +
+icon:hand-o-down[] hand-o-down [&#xf0a7;] +
+icon:hand-o-left[] hand-o-left [&#xf0a5;] +
+icon:hand-o-right[] hand-o-right [&#xf0a4;] +
+icon:hand-o-up[] hand-o-up [&#xf0a6;] +
+icon:hdd-o[] hdd-o [&#xf0a0;] +
+icon:header[] header [&#xf1dc;] +
+icon:headphones[] headphones [&#xf025;] +
+icon:heart[] heart [&#xf004;] +
+icon:heart-o[] heart-o [&#xf08a;] +
+icon:history[] history [&#xf1da;] +
+icon:home[] home [&#xf015;] +
+icon:hospital-o[] hospital-o [&#xf0f8;] +
+icon:html5[] html5 [&#xf13b;] +
+icon:ils[] ils [&#xf20b;] +
+icon:image (alias)[] image (alias) [&#xf03e;] +
+icon:inbox[] inbox [&#xf01c;] +
+icon:indent[] indent [&#xf03c;] +
+icon:info[] info [&#xf129;] +
+icon:info-circle[] info-circle [&#xf05a;] +
+icon:inr[] inr [&#xf156;] +
+icon:instagram[] instagram [&#xf16d;] +
+icon:institution (alias)[] institution (alias) [&#xf19c;] +
+icon:ioxhost[] ioxhost [&#xf208;] +
+icon:italic[] italic [&#xf033;] +
+icon:joomla[] joomla [&#xf1aa;] +
+icon:jpy[] jpy [&#xf157;] +
+icon:jsfiddle[] jsfiddle [&#xf1cc;] +
+icon:key[] key [&#xf084;] +
+icon:keyboard-o[] keyboard-o [&#xf11c;] +
+icon:krw[] krw [&#xf159;] +
+icon:language[] language [&#xf1ab;] +
+icon:laptop[] laptop [&#xf109;] +
+icon:lastfm[] lastfm [&#xf202;] +
+icon:lastfm-square[] lastfm-square [&#xf203;] +
+icon:leaf[] leaf [&#xf06c;] +
+icon:legal (alias)[] legal (alias) [&#xf0e3;] +
+icon:lemon-o[] lemon-o [&#xf094;] +
+icon:level-down[] level-down [&#xf149;] +
+icon:level-up[] level-up [&#xf148;] +
+icon:life-bouy (alias)[] life-bouy (alias) [&#xf1cd;] +
+icon:life-buoy (alias)[] life-buoy (alias) [&#xf1cd;] +
+icon:life-ring[] life-ring [&#xf1cd;] +
+icon:life-saver (alias)[] life-saver (alias) [&#xf1cd;] +
+icon:lightbulb-o[] lightbulb-o [&#xf0eb;] +
+icon:line-chart[] line-chart [&#xf201;] +
+icon:link[] link [&#xf0c1;] +
+icon:linkedin[] linkedin [&#xf0e1;] +
+icon:linkedin-square[] linkedin-square [&#xf08c;] +
+icon:linux[] linux [&#xf17c;] +
+icon:list[] list [&#xf03a;] +
+icon:list-alt[] list-alt [&#xf022;] +
+icon:list-ol[] list-ol [&#xf0cb;] +
+icon:list-ul[] list-ul [&#xf0ca;] +
+icon:location-arrow[] location-arrow [&#xf124;] +
+icon:lock[] lock [&#xf023;] +
+icon:long-arrow-down[] long-arrow-down [&#xf175;] +
+icon:long-arrow-left[] long-arrow-left [&#xf177;] +
+icon:long-arrow-right[] long-arrow-right [&#xf178;] +
+icon:long-arrow-up[] long-arrow-up [&#xf176;] +
+icon:magic[] magic [&#xf0d0;] +
+icon:magnet[] magnet [&#xf076;] +
+icon:mail-forward (alias)[] mail-forward (alias) [&#xf064;] +
+icon:mail-reply (alias)[] mail-reply (alias) [&#xf112;] +
+icon:mail-reply-all (alias)[] mail-reply-all (alias) [&#xf122;] +
+icon:male[] male [&#xf183;] +
+icon:map-marker[] map-marker [&#xf041;] +
+icon:maxcdn[] maxcdn [&#xf136;] +
+icon:meanpath[] meanpath [&#xf20c;] +
+icon:medkit[] medkit [&#xf0fa;] +
+icon:meh-o[] meh-o [&#xf11a;] +
+icon:microphone[] microphone [&#xf130;] +
+icon:microphone-slash[] microphone-slash [&#xf131;] +
+icon:minus[] minus [&#xf068;] +
+icon:minus-circle[] minus-circle [&#xf056;] +
+icon:minus-square[] minus-square [&#xf146;] +
+icon:minus-square-o[] minus-square-o [&#xf147;] +
+icon:mobile[] mobile [&#xf10b;] +
+icon:mobile-phone (alias)[] mobile-phone (alias) [&#xf10b;] +
+icon:money[] money [&#xf0d6;] +
+icon:moon-o[] moon-o [&#xf186;] +
+icon:mortar-board (alias)[] mortar-board (alias) [&#xf19d;] +
+icon:music[] music [&#xf001;] +
+icon:navicon (alias)[] navicon (alias) [&#xf0c9;] +
+icon:newspaper-o[] newspaper-o [&#xf1ea;] +
+icon:openid[] openid [&#xf19b;] +
+icon:outdent[] outdent [&#xf03b;] +
+icon:pagelines[] pagelines [&#xf18c;] +
+icon:paint-brush[] paint-brush [&#xf1fc;] +
+icon:paper-plane[] paper-plane [&#xf1d8;] +
+icon:paper-plane-o[] paper-plane-o [&#xf1d9;] +
+icon:paperclip[] paperclip [&#xf0c6;] +
+icon:paragraph[] paragraph [&#xf1dd;] +
+icon:paste (alias)[] paste (alias) [&#xf0ea;] +
+icon:pause[] pause [&#xf04c;] +
+icon:paw[] paw [&#xf1b0;] +
+icon:paypal[] paypal [&#xf1ed;] +
+icon:pencil[] pencil [&#xf040;] +
+icon:pencil-square[] pencil-square [&#xf14b;] +
+icon:pencil-square-o[] pencil-square-o [&#xf044;] +
+icon:phone[] phone [&#xf095;] +
+icon:phone-square[] phone-square [&#xf098;] +
+icon:photo (alias)[] photo (alias) [&#xf03e;] +
+icon:picture-o[] picture-o [&#xf03e;] +
+icon:pie-chart[] pie-chart [&#xf200;] +
+icon:pied-piper[] pied-piper [&#xf1a7;] +
+icon:pied-piper-alt[] pied-piper-alt [&#xf1a8;] +
+icon:pinterest[] pinterest [&#xf0d2;] +
+icon:pinterest-square[] pinterest-square [&#xf0d3;] +
+icon:plane[] plane [&#xf072;] +
+icon:play[] play [&#xf04b;] +
+icon:play-circle[] play-circle [&#xf144;] +
+icon:play-circle-o[] play-circle-o [&#xf01d;] +
+icon:plug[] plug [&#xf1e6;] +
+icon:plus[] plus [&#xf067;] +
+icon:plus-circle[] plus-circle [&#xf055;] +
+icon:plus-square[] plus-square [&#xf0fe;] +
+icon:plus-square-o[] plus-square-o [&#xf196;] +
+icon:power-off[] power-off [&#xf011;] +
+icon:print[] print [&#xf02f;] +
+icon:puzzle-piece[] puzzle-piece [&#xf12e;] +
+icon:qq[] qq [&#xf1d6;] +
+icon:qrcode[] qrcode [&#xf029;] +
+icon:question[] question [&#xf128;] +
+icon:question-circle[] question-circle [&#xf059;] +
+icon:quote-left[] quote-left [&#xf10d;] +
+icon:quote-right[] quote-right [&#xf10e;] +
+icon:ra (alias)[] ra (alias) [&#xf1d0;] +
+icon:random[] random [&#xf074;] +
+icon:rebel[] rebel [&#xf1d0;] +
+icon:recycle[] recycle [&#xf1b8;] +
+icon:reddit[] reddit [&#xf1a1;] +
+icon:reddit-square[] reddit-square [&#xf1a2;] +
+icon:refresh[] refresh [&#xf021;] +
+icon:remove (alias)[] remove (alias) [&#xf00d;] +
+icon:renren[] renren [&#xf18b;] +
+icon:reorder (alias)[] reorder (alias) [&#xf0c9;] +
+icon:repeat[] repeat [&#xf01e;] +
+icon:reply[] reply [&#xf112;] +
+icon:reply-all[] reply-all [&#xf122;] +
+icon:retweet[] retweet [&#xf079;] +
+icon:rmb (alias)[] rmb (alias) [&#xf157;] +
+icon:road[] road [&#xf018;] +
+icon:rocket[] rocket [&#xf135;] +
+icon:rotate-left (alias)[] rotate-left (alias) [&#xf0e2;] +
+icon:rotate-right (alias)[] rotate-right (alias) [&#xf01e;] +
+icon:rouble (alias)[] rouble (alias) [&#xf158;] +
+icon:rss[] rss [&#xf09e;] +
+icon:rss-square[] rss-square [&#xf143;] +
+icon:rub[] rub [&#xf158;] +
+icon:ruble (alias)[] ruble (alias) [&#xf158;] +
+icon:rupee (alias)[] rupee (alias) [&#xf156;] +
+icon:save (alias)[] save (alias) [&#xf0c7;] +
+icon:scissors[] scissors [&#xf0c4;] +
+icon:search[] search [&#xf002;] +
+icon:search-minus[] search-minus [&#xf010;] +
+icon:search-plus[] search-plus [&#xf00e;] +
+icon:send (alias)[] send (alias) [&#xf1d8;] +
+icon:send-o (alias)[] send-o (alias) [&#xf1d9;] +
+icon:share[] share [&#xf064;] +
+icon:share-alt[] share-alt [&#xf1e0;] +
+icon:share-alt-square[] share-alt-square [&#xf1e1;] +
+icon:share-square[] share-square [&#xf14d;] +
+icon:share-square-o[] share-square-o [&#xf045;] +
+icon:shekel (alias)[] shekel (alias) [&#xf20b;] +
+icon:sheqel (alias)[] sheqel (alias) [&#xf20b;] +
+icon:shield[] shield [&#xf132;] +
+icon:shopping-cart[] shopping-cart [&#xf07a;] +
+icon:sign-in[] sign-in [&#xf090;] +
+icon:sign-out[] sign-out [&#xf08b;] +
+icon:signal[] signal [&#xf012;] +
+icon:sitemap[] sitemap [&#xf0e8;] +
+icon:skype[] skype [&#xf17e;] +
+icon:slack[] slack [&#xf198;] +
+icon:sliders[] sliders [&#xf1de;] +
+icon:slideshare[] slideshare [&#xf1e7;] +
+icon:smile-o[] smile-o [&#xf118;] +
+icon:soccer-ball-o (alias)[] soccer-ball-o (alias) [&#xf1e3;] +
+icon:sort[] sort [&#xf0dc;] +
+icon:sort-alpha-asc[] sort-alpha-asc [&#xf15d;] +
+icon:sort-alpha-desc[] sort-alpha-desc [&#xf15e;] +
+icon:sort-amount-asc[] sort-amount-asc [&#xf160;] +
+icon:sort-amount-desc[] sort-amount-desc [&#xf161;] +
+icon:sort-asc[] sort-asc [&#xf0de;] +
+icon:sort-desc[] sort-desc [&#xf0dd;] +
+icon:sort-down (alias)[] sort-down (alias) [&#xf0dd;] +
+icon:sort-numeric-asc[] sort-numeric-asc [&#xf162;] +
+icon:sort-numeric-desc[] sort-numeric-desc [&#xf163;] +
+icon:sort-up (alias)[] sort-up (alias) [&#xf0de;] +
+icon:soundcloud[] soundcloud [&#xf1be;] +
+icon:space-shuttle[] space-shuttle [&#xf197;] +
+icon:spinner[] spinner [&#xf110;] +
+icon:spoon[] spoon [&#xf1b1;] +
+icon:spotify[] spotify [&#xf1bc;] +
+icon:square[] square [&#xf0c8;] +
+icon:square-o[] square-o [&#xf096;] +
+icon:stack-exchange[] stack-exchange [&#xf18d;] +
+icon:stack-overflow[] stack-overflow [&#xf16c;] +
+icon:star[] star [&#xf005;] +
+icon:star-half[] star-half [&#xf089;] +
+icon:star-half-empty (alias)[] star-half-empty (alias) [&#xf123;] +
+icon:star-half-full (alias)[] star-half-full (alias) [&#xf123;] +
+icon:star-half-o[] star-half-o [&#xf123;] +
+icon:star-o[] star-o [&#xf006;] +
+icon:steam[] steam [&#xf1b6;] +
+icon:steam-square[] steam-square [&#xf1b7;] +
+icon:step-backward[] step-backward [&#xf048;] +
+icon:step-forward[] step-forward [&#xf051;] +
+icon:stethoscope[] stethoscope [&#xf0f1;] +
+icon:stop[] stop [&#xf04d;] +
+icon:strikethrough[] strikethrough [&#xf0cc;] +
+icon:stumbleupon[] stumbleupon [&#xf1a4;] +
+icon:stumbleupon-circle[] stumbleupon-circle [&#xf1a3;] +
+icon:subscript[] subscript [&#xf12c;] +
+icon:suitcase[] suitcase [&#xf0f2;] +
+icon:sun-o[] sun-o [&#xf185;] +
+icon:superscript[] superscript [&#xf12b;] +
+icon:support (alias)[] support (alias) [&#xf1cd;] +
+icon:table[] table [&#xf0ce;] +
+icon:tablet[] tablet [&#xf10a;] +
+icon:tachometer[] tachometer [&#xf0e4;] +
+icon:tag[] tag [&#xf02b;] +
+icon:tags[] tags [&#xf02c;] +
+icon:tasks[] tasks [&#xf0ae;] +
+icon:taxi[] taxi [&#xf1ba;] +
+icon:tencent-weibo[] tencent-weibo [&#xf1d5;] +
+icon:terminal[] terminal [&#xf120;] +
+icon:text-height[] text-height [&#xf034;] +
+icon:text-width[] text-width [&#xf035;] +
+icon:th[] th [&#xf00a;] +
+icon:th-large[] th-large [&#xf009;] +
+icon:th-list[] th-list [&#xf00b;] +
+icon:thumb-tack[] thumb-tack [&#xf08d;] +
+icon:thumbs-down[] thumbs-down [&#xf165;] +
+icon:thumbs-o-down[] thumbs-o-down [&#xf088;] +
+icon:thumbs-o-up[] thumbs-o-up [&#xf087;] +
+icon:thumbs-up[] thumbs-up [&#xf164;] +
+icon:ticket[] ticket [&#xf145;] +
+icon:times[] times [&#xf00d;] +
+icon:times-circle[] times-circle [&#xf057;] +
+icon:times-circle-o[] times-circle-o [&#xf05c;] +
+icon:tint[] tint [&#xf043;] +
+icon:toggle-down (alias)[] toggle-down (alias) [&#xf150;] +
+icon:toggle-left (alias)[] toggle-left (alias) [&#xf191;] +
+icon:toggle-off[] toggle-off [&#xf204;] +
+icon:toggle-on[] toggle-on [&#xf205;] +
+icon:toggle-right (alias)[] toggle-right (alias) [&#xf152;] +
+icon:toggle-up (alias)[] toggle-up (alias) [&#xf151;] +
+icon:trash[] trash [&#xf1f8;] +
+icon:trash-o[] trash-o [&#xf014;] +
+icon:tree[] tree [&#xf1bb;] +
+icon:trello[] trello [&#xf181;] +
+icon:trophy[] trophy [&#xf091;] +
+icon:truck[] truck [&#xf0d1;] +
+icon:try[] try [&#xf195;] +
+icon:tty[] tty [&#xf1e4;] +
+icon:tumblr[] tumblr [&#xf173;] +
+icon:tumblr-square[] tumblr-square [&#xf174;] +
+icon:turkish-lira (alias)[] turkish-lira (alias) [&#xf195;] +
+icon:twitch[] twitch [&#xf1e8;] +
+icon:twitter[] twitter [&#xf099;] +
+icon:twitter-square[] twitter-square [&#xf081;] +
+icon:umbrella[] umbrella [&#xf0e9;] +
+icon:underline[] underline [&#xf0cd;] +
+icon:undo[] undo [&#xf0e2;] +
+icon:university[] university [&#xf19c;] +
+icon:unlink (alias)[] unlink (alias) [&#xf127;] +
+icon:unlock[] unlock [&#xf09c;] +
+icon:unlock-alt[] unlock-alt [&#xf13e;] +
+icon:unsorted (alias)[] unsorted (alias) [&#xf0dc;] +
+icon:upload[] upload [&#xf093;] +
+icon:usd[] usd [&#xf155;] +
+icon:user[] user [&#xf007;] +
+icon:user-md[] user-md [&#xf0f0;] +
+icon:users[] users [&#xf0c0;] +
+icon:video-camera[] video-camera [&#xf03d;] +
+icon:vimeo-square[] vimeo-square [&#xf194;] +
+icon:vine[] vine [&#xf1ca;] +
+icon:vk[] vk [&#xf189;] +
+icon:volume-down[] volume-down [&#xf027;] +
+icon:volume-off[] volume-off [&#xf026;] +
+icon:volume-up[] volume-up [&#xf028;] +
+icon:warning (alias)[] warning (alias) [&#xf071;] +
+icon:wechat (alias)[] wechat (alias) [&#xf1d7;] +
+icon:weibo[] weibo [&#xf18a;] +
+icon:weixin[] weixin [&#xf1d7;] +
+icon:wheelchair[] wheelchair [&#xf193;] +
+icon:wifi[] wifi [&#xf1eb;] +
+icon:windows[] windows [&#xf17a;] +
+icon:won (alias)[] won (alias) [&#xf159;] +
+icon:wordpress[] wordpress [&#xf19a;] +
+icon:wrench[] wrench [&#xf0ad;] +
+icon:xing[] xing [&#xf168;] +
+icon:xing-square[] xing-square [&#xf169;] +
+icon:yahoo[] yahoo [&#xf19e;] +
+icon:yelp[] yelp [&#xf1e9;] +
+icon:yen (alias)[] yen (alias) [&#xf157;] +
+icon:youtube[] youtube [&#xf167;] +
+icon:youtube-play[] youtube-play [&#xf16a;] +
+icon:youtube-square[] youtube-square [&#xf166;] +
