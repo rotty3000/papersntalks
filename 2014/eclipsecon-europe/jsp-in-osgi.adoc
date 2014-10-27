@@ -1,3 +1,173 @@
-Breathing new life into JSP with OSGi!
-Why Bother???
+# icon:folder-open[] Breathing new life into JSP with OSGi!
+Raymond Augé <raymond.auge@liferay.com>
+:icons: font
+:title: Why Bother???
+:description: Presentation at Eclipsecon Europe 2014
+:hashtags: #OSGiCE #eclipsecon #jspinosgi
+:twitter: @rotty3000
 
+[big]**Why Bother???**
+
+|===
+|**{author}**
+|**icon:twitter[] {twitter} \| {hashtags}**
+|===
+
+////
+Block comment
+////
+
+<<<
+
+== icon:th-list[] Outline
+
+[cols="2*", frame="none"]
+|===
+|
+icon:arrow-circle-right[] [big]**JSP!!! What's the meaning of this?** +
+icon:arrow-circle-right[] [big]**Bytecode is Better** +
+icon:arrow-circle-right[] [big]**Initial Problems** +
+icon:arrow-circle-right[] [big]**Compiling** +
+icon:arrow-circle-right[] [big]**Designing a Solution** +
+icon:arrow-circle-right[] [big]**Key Java EE OSGi Bundles** +
+icon:arrow-circle-right[] [big]**Jasper** +
+|
+icon:arrow-circle-right[] [big]**Compilation - javax.tools** +
+icon:arrow-circle-right[] [big]**OSGi Support - org.osgi.framework.wiring** +
+icon:arrow-circle-right[] [big]**Phidias** +
+icon:arrow-circle-right[] [big]**Liferay JSP Compiler** +
+icon:arrow-circle-right[] [big]**Some Details** +
+icon:arrow-circle-right[] [big]**Demo Time** +
+|===
+
+<<<
+
+== icon:arrow-circle-right[] JSP!!! What's the meaning of this?
+
+* Isn't *JSP* a dead tech?
+* Enterprises use *JSP* *_a lot_*
+** `find -type f -regex .*\.jspf? | wc -l`
+*** Eclipse = 59
+*** Liferay = 1696
+*** Liferay Plugins = 669
+
+<<<
+
+== icon:arrow-circle-right[] Bytecode is Better
+
+* *_Compiled to Bytecode_* view templates _still_ most efficient server side
+** w.r.t. memory consumption and performance
+** Other *_compiled to bytecode_* view tech not as widely known
+*** *Play Scala Templates*
+*** *Google Soy Templates*
+
+<<<
+
+== icon:arrow-circle-right[] Initial Problems
+
+* Java EE instantiation model (`ServiceLoader`, `Class.forName`, TCCL)
+* Limitations to the existing JSP servlet impls required ugly hacks
+* Compilation dependencies lead to complex runtime dependencies
+
+<<<
+
+== icon:arrow-circle-right[] Compiling
+
+* Traditionally - JDT *_load the world_* compilation strategy
+** JDT is not a small dependency
+* Other compilation options non-existent
+* OSGi had no way to natively support compilation process
+
+<<<
+
+== icon:arrow-circle-right[] Designing a Solution
+
+* Re-use existing tech when possible
+* Use JDK compiler API (since Java 6)
+* Avoid lots of hacks
+* Keep a small footprint
+* Limit usage requirements
+
+<<<
+
+== icon:arrow-circle-right[] Key Java EE OSGi Bundles
+
+* Key API/RIs are OSGi bundles
+** Servlet
+** JSP
+** JSTL
+** EL
+
+Thanks Glassfish!
+
+<<<
+
+== icon:arrow-circle-right[] Jasper
+
+* Proven and stable
+* Has limited dependencies
+* Recently solved issues enabling easier OSGi use
+
+Thanks Glassfish!
+
+<<<
+
+== icon:arrow-circle-right[] Java SE Support - javax.tools
+
+* Since Java SE 6
+* Full blown compiler support
+* .. complicated to use
+
+<<<
+
+== icon:arrow-circle-right[] OSGi Support - org.osgi.framework.wiring
+
+* Since Core R4.3
+* Deep classloader & wiring resource access
+
+<<<
+
+== icon:arrow-circle-right[] Phidias
+
+* Small OSS bundle which crosses
+** javax.tools
+** org.osgi.framework.wiring
+* Provides simplified OSGi aware compiler support
+* Alpha (0.3.4)
+
+<<<
+
+== icon:arrow-circle-right[] Liferay JSP Compiler
+
+* Extends Jasper with custom
+** JSP compiler which uses Phidias
+** JSP servlet which transparently handles classloading concerns
+
+== icon:arrow-circle-right[] Some Details
+
+* Entire JSP support ~ 1.3MB
+* Most modern versions of JSP, JSTL, EL available
+* No need to declare any JSP related imports in JSP _enabled_ bundles
+* No need to include any libs or standard TLDs
+* No need to WAB your bundles
+** Can use regular old jar layout + web fragment subtree
+*** Place JSPs in `META-INF/resources/`
+
+<<<
+
+== icon:arrow-circle-right[] Demo Time
+
+* [big]**A Quick DEMO**
+
+<<<
+
+== icon:arrow-circle-right[] OSGi Aware Compilation
+
+* Does this open the door for other interesting topics?
+** Limit compile time view of the world to public APIs?
+
+<<<
+
+== icon:arrow-circle-right[] Thank you!
+
+* [big]**Questions?**

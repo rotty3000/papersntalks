@@ -1,0 +1,31 @@
+@import url(theme/foundation.css);
+
+body {
+	background-image: url('./theme/liferaylogo.png'), url('./theme/osgice14logo.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left bottom, right bottom;
+	background-size: auto 15%,  auto 15%;
+
+	font-size: 1.4em;
+}
+
+p {
+	line-height: initial;
+}
+
+ul, ol, dl {
+	font-size: 1.4em;
+}
+
+.large {
+	font-size: large;
+}
+
+.x-large {
+	font-size: x-large;
+}
+
+.xx-large {
+	font-size: xx-large;
+}
