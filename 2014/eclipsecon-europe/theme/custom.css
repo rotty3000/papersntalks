@@ -7,25 +7,25 @@ body {
 	background-position: left bottom, right bottom;
 	background-size: auto 15%,  auto 15%;
 
-	font-size: 1.4em;
+	/*font-size: 1.4em;*/
 }
 
 p {
-	line-height: initial;
+	/*line-height: initial;*/
 }
 
 ul, ol, dl {
 	font-size: 1.4em;
 }
 
-.large {
-	font-size: large;
+.big, .large {
+	font-size: 1.6em;
 }
 
 .x-large {
-	font-size: x-large;
+	font-size: 1.8em;
 }
 
 .xx-large {
-	font-size: xx-large;
+	font-size: 2em;
 }

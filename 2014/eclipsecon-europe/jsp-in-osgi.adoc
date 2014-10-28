@@ -3,7 +3,7 @@ Raymond Augé <raymond.auge@liferay.com>
 :icons: font
 :title: Why Bother???
 :description: Presentation at Eclipsecon Europe 2014
-:hashtags: #OSGiCE #eclipsecon #jspinosgi
+:hashtags: #OSGi #eclipsecon #jspinosgi
 :twitter: @rotty3000
 
 [big]**Why Bother???**
