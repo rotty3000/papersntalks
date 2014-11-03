@@ -20,15 +20,15 @@ Raymond Augé <raymond.auge@liferay.com>
 [cols="2*", frame="none"]
 |===
 |
-icon:arrow-circle-right[] [big]**State of the Art** +
+//icon:arrow-circle-right[] [big]**State of the Art** +
 icon:arrow-circle-right[] [big]**Http Whiteboard** +
 icon:arrow-circle-right[] [big]**Design Goals** +
 //icon:arrow-circle-right[] [big]**From Monoliths to ... Anything, Please!** +
 icon:arrow-circle-right[] [big]**ServletContextHelper** +
 icon:arrow-circle-right[] [big]**Servlets** +
 icon:arrow-circle-right[] [big]**Resources** +
-|
 icon:arrow-circle-right[] [big]**Filters** +
+|
 icon:arrow-circle-right[] [big]**Event Listeners** +
 icon:arrow-circle-right[] [big]**Error Pages** +
 icon:arrow-circle-right[] [big]**DTOs** +
@@ -36,6 +36,7 @@ icon:arrow-circle-right[] [big]**In Action** +
 icon:arrow-circle-right[] [big]**Verdict** +
 |===
 
+////
 <<<
 
 == icon:arrow-circle-right[] State of the Art
@@ -45,6 +46,7 @@ icon:arrow-circle-right[] [big]**Verdict** +
 * Webapps easily become monoliths
 * A weak webapp lifecycle of has been badly abused
 * Cross platform support is incredibly complex due to what remains unspecified
+////
 
 <<<
 
