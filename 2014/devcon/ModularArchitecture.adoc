@@ -1,0 +1,212 @@
+# icon:folder-open[] Modular Architecture
+Raymond Augé <raymond.auge@liferay.com>
+:icons: font
+:title: Modular Architecture
+:description: Presentation at Liferay DEVCON 2014
+:hashtags: #lrdevcon #modulararchitecture
+:twitter: @rotty3000
+
+[big]**Liferay's Modular Architecture Explained**
+
+|===
+|**{author}**
+|**icon:twitter[] {twitter} \| {hashtags}**
+|===
+
+////
+Liferay Portal has always been a feature rich application with thousands of features and options resulting in billions of possible deployment scenarios. However, regardless of configuration, Liferay's core is all or nothing. We'll discuss the strategy used to redesign Liferay for modularity to improve quality and maintainability while allowing optional features to be completely removed or easily updated.
+////
+
+<<<
+
+== icon:th-list[] Outline
+
+icon:arrow-circle-left[] [big]**As it Was** +
+icon:arrow-circle-down[] [big]**As it Is** +
+icon:arrow-circle-right[] [big]**As it Shall Be** +
+icon:arrow-circle-up[] [big]**Closing**
+
+<<<
+
+== icon:arrow-circle-left[] As it Was - Thousands of features
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Tightly coupled +
+icon:circle[] No clear boundaries +
+icon:circle[] All of nothing
+|
+image:resources/scrapNAS001_f.jpg[Thousands of Features, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-left[] As it Was - The ties that bind us...
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] At the mercy of the app server +
+icon:circle[] Plugins are peers +
+icon:circle[] Start order issues +
+icon:circle[] Dependency issues +
+icon:circle[] Security issues
+|
+image:resources/scrapNAS001_d.jpg[The ties that bind us..., 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-left[] As it Was - Bridge Over Troubled Waters
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Push as much as we can into _shared_ +
+icon:circle[] App server idiosyncrasies +
+icon:circle[] Protect impls through indirection +
+icon:circle[] Hundreds of wrapper APIs +
+icon:circle[] Statics became the norm
+|
+image:resources/scrapNAS001_e.jpg[Bridge Over Troubled Waters, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-down[] As it Is - Take Back Control
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Create a plugin runtime under Liferay's control +
+icon:circle[] Implement infrastructure support +
+icon:circle[] Emulate some of the App Server features
+|
+image:resources/scrapNAS001_h.jpg[Take Back Control, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-down[] As it Is - Don't turn your back
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Make sure that legacy apps (WARs) _can_ still work icon:angle-right[] provide for +
+icon:circle-o[] Auto conversion to OSGi (WAB) +
+icon:circle-o[] JSP support in OSGi +
+icon:circle[] In the process icon:angle-right[] Make a few enhancements +
+icon:circle-o[] Implement better dependency management +
+icon:circle-o[] Publish SB services as OSGi services +
+icon:circle-o[] Eliminate SB service jar copying (go direct, don't need CLP)
+|
+image:resources/scrapNAS001_i.jpg[Don't turn your back, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-down[] As it Is - Tear Down the Walls
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] OSGi decoupling is primarily based on the service registry +
+icon:circle[] Simplify integration point logic through the Registry
+|
+image:resources/scrapNAS001_k.jpg[Don't turn your back, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-down[] As it Is - Tear Down the Walls
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Registry opens the door for providers from any source +
+icon:circle[] Registry allows integration points to be placed anywhere
+|
+image:resources/scrapNAS001_l.jpg[Don't turn your back, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-down[] As it Is - Breaking it Down
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Refactoring core pieces into modules
+|
+image:resources/scrapNAS001_m.jpg[Breaking it Down, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-down[] As it Is - Breaking it Down
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Shrinking the monolith +
+icon:circle[] Enable real optionality
+|
+image:resources/scrapNAS001_n.jpg[Breaking it Down, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-right[] As it Shall Be - Strong Foundation
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Core of essentials +
+icon:circle[] Increase re-use +
+icon:circle[] Smaller physical / memory footprint +
+icon:circle[] Easier configuration
+|
+image:resources/scrapNAS001_o.jpg[Breaking it Down, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-up[] Closing
+
+[cols="2*", frame="none"]
+|===
+|
+icon:circle[] Monoliths are hard to maintain and have high production costs +
+icon:circle[] Modularity promotes isolation which promotes re-use which promotes innovation +
+icon:circle[] Modularity reduces coupling which reduces maintenance costs which leads to satisfied users +
+|
+image:resources/scrapNAS002_a.jpg[Breaking it Down, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:arrow-circle-up[] Closing
+
+[cols="2*", frame="none"]
+|===
+|
+Liferay is doing whatever it can to +
+ +
+icon:check-square-o[] Increase productivity +
+icon:check-square-o[] Reducing production and maintenance costs +
+icon:check-square-o[] Get out of your way (so you can reach your goal faster)
+|
+image:resources/scrapNAS002_a.jpg[Breaking it Down, 800, 600, align="center"]
+|===
+
+<<<
+
+== icon:comments[] Thank You!
+
+[cols="1*", frame="none"]
+|===
+|
+icon:envelope[] raymond.auge@liferay.com +
+icon:twitter[] [big]**@rotty3000**
+|===
