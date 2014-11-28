@@ -155,7 +155,7 @@ Liferay Portal's core contains the following integration points described by the
 
 |`com.liferay.portal.kernel.struts.StrutsAction` +
 `com.liferay.portal.kernel.struts.StrutsPortletAction`
-|`(&(|(objectClass=com.liferay.portal.kernel.struts.StrutsAction)(objectClass=com.liferay.portal.kernel.struts.StrutsPortletAction))(path=*))`
+|`(&(\|(objectClass=com.liferay.portal.kernel.struts.StrutsAction)(objectClass=com.liferay.portal.kernel.struts.StrutsPortletAction))(path=*))`
 
 |`com.liferay.portal.model.LayoutTypeController`
 |`(&(layout.type=*)(objectClass=com.liferay.portal.model.LayoutTypeController))`
