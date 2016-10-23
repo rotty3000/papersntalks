@@ -1,0 +1,137 @@
+<p>
+	I really love how everyone at Liferay is taking to the OSGi development model. It makes me proud to see how much work has been done in this regard.
+	<br />
+	There's one very cool area I think is worth expanding on.
+</p>
+
+<h2>Requirements and Capabilities</h2>
+
+<p>
+	<strong>What is it? Some history.</strong>
+</p>
+<p>
+	The Requirements and Capabilities model is a <strong>surprisingly powerful</strong> concept born from the 17 years of experience the OSGi Alliance has in designing modular software: defining <strong>strong contracts</strong>. In OSGi contracts are described with meta-data and enforcement by a strict runtime.
+</p>
+<p>
+	The process involved in defining these contracts led to a frequently repeating pattern. First a contract was defined using special manifest headers and their specific semantics. An example of this is the <code>Import-Package</code> header which is used to specify what java packages should be made available so that your code can execute. This was followed by the need to implement the specific logic to enforce the definition. The result of this work manifested itself (excuse the pun) by what we recognize as OSGi Bundle manifest headers and the OSGi frameworks that enforce the semantics of those headers.
+</p>
+<p>
+	Around 2005 some very smart people in the OSGi community and OSGi Alliance recognized a pattern and developed it into a <em>constraint model</em> called <strong>Requirements and Capabilities</strong>.
+</p>
+
+<h3>How does it work?</h3>
+
+<p>
+	A contract is defined starting with a unique namespace. Within this namespace semantics are defined for a set of <em>attributes</em> and <em>directives</em>. The entire definition forms a type of language from which can be created instances of <strong>Capabilities</strong> and <strong>Requirements</strong>.
+</p>
+<p>
+	Let's take an example.
+</p>
+<p>
+	Suppose I want to describe a service (which begins by defining a contract) where people can take their pets to be groomed. There are many types of pets, and many grooming agencies who can only groom certain kinds of pets because of the special skills, equipment or facilities required for each type. It can be a challenge to find an appropriate agency to groom your pet.
+</p>
+<p>
+	Let's imagine that every agency declared their capabilities using a single <em>name-space</em> called <code>pet.grooming</code> having 4 <em>attributes</em>:
+	<ul>
+		<li><em>type</em>: <strong>a list of strings</strong> naming the type of pets groomed by the agency
+		<li><em>length</em>: <strong>a positive integer</strong> specifying the maximum size of the pet which the agency can groom
+		<li><em>soap</em>: <strong>a string</strong> naming the type of soap used by the agency
+		<li><em>rate</em>: <strong>a positive integer</strong> specifying the rate per hour charged by the agency
+	</ul>
+<p>
+<p>
+	Here we have three example agencies using this contract in the syntax found within an OSGi Bundle manifest:
+</p>
+
+<strong> Agency A: Haute Pet Coiffure</strong>
+<pre>
+Provide-Capability: pet.grooming;type:List="dog,cat";length:Long=800;soap="organic";rate:Long="50"</pre>
+
+<strong>Agency B: Great Big Pets</strong>
+<pre>
+Provide-Capability: pet.grooming;type:List="cat,horse";length:Long=3000;soap="commercial";rate:Long="20"</pre>
+
+<strong>Agency C: Joe's Pets</strong><br />
+<pre>
+Provide-Capability: pet.grooming;type:List="dog,cat";length:Long=1500;soap="regular";rate:Long="15"</pre>
+<p>
+	Clients could then declare their <strong>Requirements</strong> using the <code>pet.grooming</code> <em>name-space</em> and a special <strong>LDAP filter</strong>.
+</p>
+<p>
+	Let's take a look at 5 clients:
+</p>
+<p>
+	<strong>Client A: I love my cat Cathy, but not rich!</strong>
+	<pre>
+Require-Capability: pet.grooming;filter:="(&amp;(type=cat)(rate&lt;=20))"</pre>
+	Which agencies do you think satisfy this requirement?
+	<br />
+	<em>(hint: B &amp; C)</em>
+</p>
+<p>
+	<strong>Client B: Huge Dog Doug</strong>
+	<pre>
+Require-Capability: pet.grooming;filter:="(&amp;(type=dog)(length&gt;=1000))"</pre>
+	Which agencies do you think satisfy this requirement?
+	<br />
+	<em>(hint: C)</em>
+</p>
+<p>
+	<strong>Client C: Horse Haurice</strong>
+	<pre>
+Require-Capability: pet.grooming;filter:="(type=horse)"</pre>
+	Which agencies do you think satisfy this requirement?
+	<br />
+	<em>(hint: B)</em>
+</p>
+<p>
+	<strong>Client D: Stylish Stan</strong>
+	<pre>
+Require-Capability: pet.grooming;filter:="(&amp;(type=dog)(soap=organic))"</pre>
+	Which agencies do you think satisfy this requirement?
+	<br />
+	<em>(hint: A)</em>
+</p>
+<p>
+	<strong>Client E: Cat lady Clara</strong>
+	<pre>
+Require-Capability: pet.grooming;filter:="(type=cat)"</pre>
+	Which agencies do you think satisfy this requirement?
+	<br />
+	<em>(hint: A &amp; B &amp; C)</em>
+</p>
+<p>
+	<strong>Client F: Hiccup</strong>
+	<pre>
+Require-Capability: pet.grooming;filter:="(type=dragon)"</pre>
+	Which agencies do you think satisfy this requirement?
+	<br />
+	<em>(hint: Oh my!!!)</em>
+</p>
+<p>
+<strong>Observation:</strong> What happens for client <em>F</em>? This is a case where requirements cannot be satisfied. What does this mean? This might translate directly into the resource containing this requirement not <strong>resolving</strong>. In other words, it might be completely blocked from doing whatever it was it intended to do. This is a remarkable characteristic. That we could know in a safe and reproducible way that a resource cannot be satisfied could prevent any number of catastrophic situations we would hard pressed recovering from at runtime.
+</p>
+<p>
+	Once again, note the <em>name-space</em> and the <em>filter</em> used to query or match the attributes of the available <strong>Capabilities</strong>.
+</p>
+<p>
+	This language which first materialized as OSGi RFC 112 is very powerful and can model a wide range of contracts. It's power was demonstrated by the fact that all bundle headers from prior OSGi specifications could be modelled by it. It also became possible to implement an engine which could calculate a set of resources given an initial set of requirements. This engine is known as <strong>the resolver</strong> and all OSGi frameworks beginning at release R4.3 have such a resolver at their heart. Since then it's possible by specifying new name-spaces to model new contracts specific to your own needs. These new contracts play at par with any of the OSGi defined name-spaces.
+</p>
+<p>
+	In Liferay we have used this language to generalize contracts for <strong>JSP Tag Libraries</strong> to enable modularity around their use, for <strong>Service Builder</strong> extender support, so that the correct version of service builder framework is available to support your SB modules. We have also used it to create a prototype of <a href="https://github.com/osgi/design/blob/master/rfps/rfp-0171-Web-Resources.pdf">RFP 171 - Web Resources</a> to enable modular UI development.
+</p>
+<p>
+	One of great benefits of having such succinct way of defining a contract is that much of the information can be auto generated through introspection which makes it both easy to implement and use. The majority of cases require little to no effort from the developers who are requiring capabilities, and greatly reduces the effort for developers who are providing them.
+</p>
+<p>
+	Recently the <a href="https://github.com/bndtools/bnd">bnd</a> project was enhanced with a set of annotations to easily produce arbitrary Requirements and Capabilities automatically. These annotations can be seen in use in the <a href="http://enroute.osgi.org/">OSGi enRoute</a> project.
+</p>
+<p>
+	As a follow up to the bnd POC an RFP was submitted to and accepted by the OSGi Alliance under <a href="https://github.com/osgi/design/blob/master/rfps/rfp-0167-Manifest-Annotations.pdf">RFP 167 - Manifest Annotations</a> to specify a standard set of annotations for simplifying and enhancing manifest management programmatically, including <strong>Requirements and Capabilities</strong>.
+</p>
+<p>
+	There is a lot of exciting work going on in this area and many opportunities to get involved, the simplest of which is giving feedback on or testing current work.
+</p>	
+<p>
+	How could you use the <strong>Requirements and Capabilities</strong> model in your project?
+</p>

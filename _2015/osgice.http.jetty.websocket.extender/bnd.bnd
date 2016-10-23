@@ -1,0 +1,16 @@
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: osgice.http.jetty.websocket.extender
+
+-buildpath: \
+	osgi.annotation;version=6.0.1,\
+	osgi.core;version=6.0,\
+	osgi.cmpn;version=6.0,\
+	org.apache.felix.http.jetty,\
+	org.eclipse.jetty.websocket.javax.websocket.server,\
+	org.apache.felix.http.servlet-api,\
+	javax.websocket-api,\
+	org.eclipse.jetty.util,\
+	org.eclipse.jetty.websocket.common,\
+	org.eclipse.jetty.websocket.javax.websocket
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8

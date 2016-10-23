@@ -1,0 +1,13 @@
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: osgice.http.web.*
+
+-includeresource={resources}
+
+-buildpath: \
+	osgi.annotation;version=6.0.1,\
+	osgi.core;version=6.0,\
+	osgi.cmpn;version=6.0,\
+	com.liferay.portal.servlet.jsp.compiler,\
+	javax.servlet-api
+-runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runee: JavaSE-1.8

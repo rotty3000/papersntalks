@@ -1,0 +1,6 @@
+Bundle-Version: 0.0.0.${tstamp}
+Bundle-SymbolicName:  osgice.http.websocket.fragment
+Fragment-Host: org.apache.felix.http.api
+Export-Package:\
+	javax.websocket,\
+	javax.websocket.server
