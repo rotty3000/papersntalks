@@ -1,6 +1,6 @@
 ## Modularity
 
-Since the early days of software development, the benefits of creating modular systems were pretty well accepted. Modular system provided a number of benefits from technical (like replacability) to organizational (like manpower scalability). However, at scale modularity can require a significant amount of mental energy. Building and assembling large systems from a large number of modules gets complex pretty fast. *This is likely to have been the reason why **monoliths** became so prolific.*
+Since the early days of software development, the benefits of creating modular systems were pretty well accepted. Modular system provided a number of benefits from technical (like replaceability) to organizational (like manpower scalability). However, at scale modularity can require a significant amount of mental energy. Building and assembling large systems from a large number of modules gets complex pretty fast. *This is likely to have been the reason why **monoliths** became so prolific.*
 
 Given hundreds or thousands of modules the sheer volumn of information can make reasoning about them difficult.
 
