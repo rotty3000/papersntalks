@@ -109,3 +109,18 @@ Provide-Capability: \
         version='1.0'; \
         intents='async'
 ```
+
+## Enriching Knowledge of Artifacts
+
+The essential requirement is to be able to enrich the knowledge we have about artifacts. Not only this but because we don't already control all the artifacts we may use we need a way to adjust the knowledge of other artifacts without a heavy process. Finally, we need to be able to share the additional knowledge we've added with others to avoid duplication of effort.
+
+## Mechanisms for Enrichment
+
+- enabled annotations
+    - DS
+    - Metatype
+- augments
+    - resolve time augments
+    - repository augments
+    - runtime augments
+- custom annotations
