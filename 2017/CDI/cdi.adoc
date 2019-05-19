@@ -1,0 +1,10 @@
+# icon:folder-open[] OSGi CDI Integration Specification
+Raymond Augé <raymond.auge@liferay.com>
+:icons: font
+:title: OSGi CDI Integration Specification
+:description: OSGi CDI Integration Specification
+:hashtags: #OSGi #CDI #integration
+:twitter: @rotty3000
+:toc:
+
+image::/home/rotty/projects/osgi.members.build/osgi.specs/docbook/152/component-model.svg[OSGi CDI Integration Model]

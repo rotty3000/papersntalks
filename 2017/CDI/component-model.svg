@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+	version="1.1"
+	id="image"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="470px"
+	height="570px"
+	xml:space="preserve"
+>
+
+	<!-- DEBUGGING ONLY -->
+
+	<!-- <rect x="0" y="0" stroke="#000" fill="none" width="100%" height="100%"/> -->
+
+	<!-- REUSABLE PARTS -->
+
+	<defs>
+		<symbol id="circle">
+			<circle cx="12" cy="12" r="6" stroke="#ccc" fill="#ccc"/>
+		</symbol>
+		<g id="box">
+			<!-- <rect x="2" y="2" stroke="black" fill="#000" width="60" height="30" /> -->
+			<rect x="0" y="0" stroke="black" fill="#FFF" width="60" height="30" />
+			<rect x="52" y="0" stroke="none" fill="#000" width="8" height="30" />
+			<text style="font-size: 7px;" x="54" y="2" fill="#fff" transform="rotate(90 54,2)">OSGi</text>
+		</g>
+		<symbol id="box.cornered">
+			<use xlink:href="#box"/>
+			<!-- <polygon points="50,30 60,20 60,30" fill="#000"/> -->
+		</symbol>
+		<g id="bean">
+			<!-- <polygon points="0,0 60,0 60,20 0,27" fill="#000" stroke="#000" transform="translate(2,2)"/> -->
+			<polygon points="0,0 60,0 60,20 0,27" fill="#fff" stroke="#000"/>
+			<rect x="52" y="0" stroke="none" fill="#000" width="8" height="20" />
+			<text style="font-size: 7px;" x="54" y="2" fill="#fff" transform="rotate(90 54,2)">CDI</text>
+		</g>
+		<symbol id="bean.cornered">
+			<use xlink:href="#bean"/>
+			<!-- <polygon points="50,21 60,12 60,20" fill="#000"/> -->
+		</symbol>
+		<marker id="arrowHead" markerWidth="10" markerHeight="6" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+			<path d="M0,0 L10,3 L0,6 z" fill="#000" />
+		</marker>
+		<marker id="arrowHeadGray" markerWidth="10" markerHeight="6" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+			<path d="M0,0 L10,3 L0,6 z" fill="#ccc" />
+		</marker>
+		<g id="one">
+			<text style="font-size: 8px;" x="0" y="0">1</text>
+		</g>
+		<g id="oneton">
+			<text style="font-size: 8px;" x="0" y="0">1..n</text>
+		</g>
+		<g id="zeroton">
+			<text style="font-size: 8px;" x="0" y="0">0..n</text>
+		</g>
+	</defs>
+
+	<g>
+		<!-- Line from grey [Component Instance] background to [Single Component], [Factory Component] -->
+		<polyline points="380,346 466,346 466,12 200,12 200,22" stroke="#ccc" fill="none" stroke-dasharray="5, 3" marker-end="url(#arrowHeadGray)"/>
+		<polyline points="266,12 266,22" stroke="#ccc" fill="none" stroke-dasharray="5, 3" marker-end="url(#arrowHeadGray)"/>
+	</g>
+
+	<!-- ENTITIES -->
+
+	<svg x="38" y="34">
+		<!-- (Start) -->
+		<use xlink:href="#circle"/>
+	</svg>
+	<g>
+		<!-- Arrow from (DOT) to [Application Component] -->
+		<polyline points="56,46 94,46" stroke="#ccc" stroke-dasharray="5, 3" marker-end="url(#arrowHeadGray)"/>
+	</g>
+
+	<svg x="104" y="30">
+		<!-- [Application Component] -->
+		<use xlink:href="#box.cornered"/>
+		<text x="2" y="8" style="font-size: 7px;">Application</text>
+		<text x="2" y="18" style="font-size: 7px;">Component</text>
+	</svg>
+	<g>
+			<!-- Arrow from [Application Component] to [Component] -->
+			<polyline points="134,60 190,96" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="170" y="30">
+		<!-- [Single Component] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Single</text>
+		<text style="font-size: 7px;" x="2" y="18">Component</text>
+	</svg>
+	<g>
+			<!-- Arrow from [Single Component] to [Component] -->
+			<polyline points="200,60 200,92" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="236" y="30">
+		<!-- [Factory Component] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Factory</text>
+		<text style="font-size: 7px;" x="2" y="18">Component</text>
+	</svg>
+	<g>
+			<!-- Arrow from [Factory Component] to [Component] -->
+			<polyline points="266,60 210,96" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="170" y="102">
+		<!-- [Component] -->
+		<use xlink:href="#box"/>
+		<text style="font-size: 7px;" x="2" y="8">Component</text>
+	</svg>
+	<g>
+			<!-- Line from [Component] to [Managed Bean] -->
+			<polyline points="230,118 290,118" stroke="black"/>
+			<use x="234" y="116" xlink:href="#one"/>
+			<use x="274" y="116" xlink:href="#zeroton"/>
+	</g>
+	<g>
+			<!-- Line from [Component] to [Component Template] -->
+			<polyline points="200,134 200,176" stroke="black"/>
+			<use x="202" y="141" xlink:href="#one"/>
+			<use x="202" y="172" xlink:href="#one"/>
+	</g>
+
+	<svg x="290" y="102">
+		<!-- [Managed Bean] -->
+		<use xlink:href="#bean"/>
+		<text style="font-size: 7px;" x="2" y="8">Bean</text>
+	</svg>
+	<g>
+			<!-- Line from [Managed Bean] to [Dependency Template] -->
+			<polyline points="320,126 320,176" stroke="black" stroke-dasharray="5, 3"/>
+			<text x="322" y="132" style="font-size: 7px;" transform="rotate(90 322,132)">describes</text>
+	</g>
+
+	<svg x="170" y="174">
+		<!-- [Component Template] -->
+		<use xlink:href="#box"/>
+		<text style="font-size: 7px;" x="2" y="8">Component</text>
+		<text style="font-size: 7px;" x="2" y="18">Template</text>
+	</svg>
+	<g>
+			<!-- Line from [Component Template] to [Dependency Template] -->
+			<polyline points="230,189 290,189" stroke="black"/>
+			<use x="234" y="187" xlink:href="#one"/>
+			<use x="274" y="187" xlink:href="#zeroton"/>
+		</g>
+	<g>
+			<!-- Line from [Component Template] to [Component Instance] -->
+			<polyline points="200,204 200,246" stroke="black"/>
+			<use x="202" y="213" xlink:href="#one"/>
+			<use x="202" y="244" xlink:href="#zeroton"/>
+	</g>
+
+	<svg x="290" y="174">
+		<!-- [Dependency Template] -->
+		<use xlink:href="#box"/>
+		<text style="font-size: 7px;" x="2" y="8">Dependency</text>
+		<text style="font-size: 7px;" x="2" y="18">Template</text>
+	</svg>
+	<g>
+			<!-- Line from [Dependency Template] to [Dependency] -->
+			<polyline points="320,206 320,246" stroke="black" stroke-dasharray="5, 3"/>
+			<text x="322" y="210" style="font-size: 8px;" transform="rotate(90 322,210)">satisfies</text>
+	</g>
+
+	<svg x="398" y="158">
+		<!-- [Configuration] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Configuration</text>
+	</svg>
+	<g>
+			<!-- Arrow from [Configuration] to [Dependency Template] -->
+			<polyline points="398,174 362,188" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="398" y="194">
+		<!-- [Service] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Service</text>
+	</svg>
+	<g>
+			<!-- Arrow from [Portable Extension] to [Dependency Template] -->
+			<polyline points="398,210 362,196" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="08" y="308">
+		<!-- grey [Component Instance] background -->
+		<rect fill="#ccc" width="372" height="254" />
+	</svg>
+
+	<svg x="170" y="246">
+		<!-- [Component Instance] -->
+		<use xlink:href="#box"/>
+		<text style="font-size: 7px;" x="2" y="8">Component</text>
+		<text style="font-size: 7px;" x="2" y="18">Instance</text>
+	</svg>
+	<g>
+			<!-- Line from [Component Instance] to [Dependency] -->
+			<polyline points="230,262 290,262" stroke="black"/>
+			<use x="234" y="260" xlink:href="#one"/>
+			<use x="274" y="260" xlink:href="#zeroton"/>
+	</g>
+	<g>
+			<!-- Line from [Component Instance] to [Managed Bean Instance] -->
+			<polyline points="200,278 200,320" stroke="black" stroke-dasharray="5, 3"/>
+			<use x="202" y="285" xlink:href="#one"/>
+			<use x="202" y="316" xlink:href="#zeroton"/>
+	</g>
+
+	<svg x="290" y="246">
+		<!-- [Dependency] -->
+		<use xlink:href="#box"/>
+		<text style="font-size: 7px;" x="2" y="8">Dependency</text>
+	</svg>
+
+	<svg x="20" y="318">
+		<!-- [Service Registration] -->
+		<use xlink:href="#box"/>
+		<text style="font-size: 7px;" x="2" y="8">Service</text>
+		<text style="font-size: 7px;" x="2" y="18">Registration</text>
+	</svg>
+	<g>
+			<!-- Line from [Service Registration] to [Configured Component] -->
+			<polyline points="50,318 50,260 170,260" stroke="black" fill="none" stroke-dasharray="5, 3"/>
+			<use x="52" y="316" xlink:href="#zeroton"/>
+			<use x="164" y="258" xlink:href="#one"/>
+	</g>
+	<g>
+			<!-- Line from [Service Registration] to [Service Scopes] -->
+			<polyline points="50,400 50,360" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="170" y="318">
+		<!-- [Contextual Instance] -->
+		<use xlink:href="#bean"/>
+		<text style="font-size: 7px;" x="2" y="8">Contextual</text>
+		<text style="font-size: 7px;" x="2" y="18">Instance</text>
+	</svg>
+	<g>
+		<!-- Arrow from [CDI Scope] to [Managed Bean Instance] -->
+		<polyline points="200,390 200,354" stroke="black" marker-end="url(#arrowHead)"/>
+	</g>
+
+	<svg x="94" y="380">
+		<!-- grey CDI scope background -->
+		<rect fill="#eee" width="284" height="50" />
+		<text style="font-size: 7px;" x="224" y="28" font-weight="bold">CDI Scope</text>
+	</svg>
+
+	<svg x="104" y="390">
+		<!-- [@ApplicationScoped] -->
+		<use xlink:href="#bean.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Application</text>
+		<text style="font-size: 7px;" x="2" y="18">Scoped</text>
+	</svg>
+
+	<svg x="170" y="390">
+		<!-- [@Dependent] -->
+		<use xlink:href="#bean.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Dependent</text>
+	</svg>
+
+	<svg x="236" y="390">
+		<!-- [@ComponentScoped] -->
+		<use xlink:href="#bean.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Component</text>
+		<text style="font-size: 7px;" x="2" y="18">Scoped</text>
+	</svg>
+
+	<svg x="10" y="380">
+		<!-- grey Service Scope background -->
+		<rect fill="#eee" width="82" height="180" />
+		<text style="font-size: 7px;" x="12" y="28" font-weight="bold">Service Scope</text>
+	</svg>
+
+	<svg x="20" y="440">
+		<!-- [Singleton] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Singleton</text>
+	</svg>
+
+	<svg x="20" y="480">
+		<!-- [Bundle] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Bundle</text>
+	</svg>
+
+	<svg x="20" y="520">
+		<!-- [Prototype] -->
+		<use xlink:href="#box.cornered"/>
+		<text style="font-size: 7px;" x="2" y="8">Prototype</text>
+	</svg>
+
+	<svg x="94" y="432">
+		<!-- grey Number of Instances background -->
+		<rect fill="#eee" width="284" height="128" />
+		<text style="font-size: 7px;" x="224" y="38" font-weight="bold">Number of</text>
+		<text style="font-size: 7px;" x="224" y="48" font-weight="bold">Managed</text>
+		<text style="font-size: 7px;" x="224" y="58" font-weight="bold">Bean</text>
+		<text style="font-size: 7px;" x="224" y="68" font-weight="bold">Instances</text>
+		<text style="font-size: 6px;" x="224" y="78">(n = any number)</text>
+		<g>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="40" y="26">1</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="40" y="66">0</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="40" y="106">0</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="104" y="26">1</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="104" y="66">n</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="104" y="106">n</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="168" y="26">1</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="168" y="66">n</text>
+			<text style="font-size: 10px; font-family:ProductusOSGiMonoc;" x="168" y="106">n</text>
+		</g>
+	</svg>
+
+</svg>
