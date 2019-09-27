@@ -10,23 +10,11 @@ Raymond Augé - Sr. Software Architect
 
 ## Why CDI In OSGi?
 
-* Reduce developer friction
 * Important Java specification
+* Reduce developer friction
 * Benefit from extensive feature set
 
-## But Declarative Services (DS)?
-
-**Liferay** loves DS!
-
-**99%** of all **Liferay** bundles (jars) are DS and the vast majority will remain DS forever. 
-
-## WHY use anything else?
-
-by design DS is...
-
-**ultra light weight**, DS annotations are syntax sugar, **CLASS retention** and processed at build time, runtime overhead is extremely low, does not provide an integration SPI, does not provide intra-bundle dependency injection.
-
-## CDI
+## CDI - Features
 
 as part of its feature set, is...
 
@@ -37,61 +25,45 @@ as part of its feature set, is...
 
 ***Custom annotations!***
 
-## CDI
-
-allows for...
-
-**completely internal wiring**.
-
-## DS - Internal wiring: new
-
-```java
-@Component
-public class FooImpl {
-  private Pojo pojo;
-
-	public FooImpl() {
-    pojo = new PojoImpl();
-  }
-}
-```
-
 ## CDI - Internal wiring: @Inject
 
 ```java
-public class FooImpl {
-  private Pojo pojo;
+import javax.inject.Inject;
+
+public class PresenterImpl implements Presenter {
+  private final Laptop laptop;
 
   @Inject
-  public FooImpl(Pojo pojo) {
-    this.pojo = pojo;
+  public PresenterImpl(Laptop laptop) {
+    this.laptop = laptop;
   }
 }
 ```
 
-## DS - Services: singleton
+## CDI - Internal wiring: @Produces
 
 ```java
-@Component
-public class FooImpl implements Function {
-  ...
+import javax.enterprise.inject.Produces;
+
+@Produces Presentation presentation(
+  LocalDate date, Presenter presenter, @Topic String topic, 
+  Details details) {
+  
+  return new Presentation.Builder(date)
+    .withPresenter(presenter)
+    .withTopic(topic)
+    .withDetails(details)
+    .build();
 }
 ```
 
 ## OSGi-CDI - Services: singleton
 
 ```java
+import org.osgi.service.cdi.annotations.Service;
+
 @Service
-public class FooImpl implements Function {
-  ...
-}
-```
-
-## DS - Services: prototype
-
-```java
-@Component(scope = PROTOTYPE)
-public class FooImpl implements Function {
+public class PresenterImpl implements Presenter {
   ...
 }
 ```
@@ -99,224 +71,242 @@ public class FooImpl implements Function {
 ## OSGi-CDI - Services: prototype
 
 ```java
+import org.osgi.service.cdi.annotations.Service;
+import org.osgi.service.cdi.annotations.ServiceInstance;
+
 @Service @ServiceInstance(PROTOTYPE)
-public class FooImpl implements Function {
+public class Beer implements Drink {
   ...
 }
 ```
 
-## DS - References
+## OSGi-CDI - References to OSGi Services
 
 ```java
-@Reference
-Pojo pojo;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - References
-
-```java
 @Inject @Reference
-Pojo pojo;
+Presenter presenter;
 ```
 
-## DS - Cardinality: mandatory
+## OSGi-CDI - References Cardinality: mandatory
 
 ```java
-@Reference
-Pojo pojo;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Cardinality: mandatory
-
-```java
 @Inject @Reference
-Pojo pojo;
+Presenter presenter;
 ```
 
-## DS - Cardinality: optional
+## OSGi-CDI - References Cardinality: optional
 
 ```java
-@Reference(cardinality = OPTIONAL)
-Pojo pojo;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Cardinality: optional
-
-```java
 @Inject @Reference
-Optional<Pojo> pojo;
+Optional<Drink> drink;
 ```
 
-## DS - Cardinality: multiple
+## OSGi-CDI - References Cardinality: multiple
 
 ```java
-@Reference
-List<Pojo> pojos;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Cardinality: multiple
-
-```java
 @Inject @Reference
-List<Pojo> pojos;
+List<Drink> drink;
 ```
 
-## DS - Cardinality: at least one (or n)
+*... implies 0..n (multiple optional)*
+
+## OSGi-CDI - References Cardinality: at least one (or n)
 
 ```java
-@Reference(cardinality = AT_LEAST_ONE)
-List<Pojo> pojos;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.MinimumCardinality;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Cardinality: at least one (or n)
-
-```java
 @Inject @Reference @MinimumCardinality(1)
-List<Pojo> pojos;
-```
-
-## DS - Reference Policy: greedy
-
-```java
-@Reference(policyOption = GREEDY)
-Pojo pojo;
+List<Drink> drink;
 ```
 
 ## OSGi-CDI - Reference Policy: reluctant
 
 ```java
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
+import org.osgi.service.cdi.annotations.Reluctant;
+
 @Inject @Reference @Reluctant
-Pojo pojo;
+Presenter presenter;
 ```
 
-## DS - Dynamic: mandatory
+*... reference is Greedy by default*
+
+## OSGi-CDI - References Dynamic: mandatory
 
 ```java
-@Reference(policy = DYNAMIC)
-volatile Pojo pojo;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Dynamic: mandatory
-
-```java
 @Inject @Reference
-Provider<Pojo> pojo;
+Provider<Presenter> presenter;
 ```
 
-## DS - Dynamic: multiple
+## OSGi-CDI - References Dynamic: multiple
 
 ```java
-@Reference(policy = DYNAMIC)
-volatile List<Pojo> pojos;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Dynamic: multiple
-
-```java
 @Inject @Reference
-Provider<List<Pojo>> pojos;
+Provider<List<Presenter>> presenters;
 ```
 
-## DS - Dynamic: optional
+## OSGi-CDI - References Dynamic: optional
 
 ```java
-@Reference(policy = DYNAMIC, cardinality = OPTIONAL)
-volatile Pojo pojo;
-```
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
 
-## OSGi-CDI - Dynamic: optional
-
-```java
 @Inject @Reference
-Provider<Optional<Pojo>> pojo;
+Provider<Optional<Presenter>> presenter;
 ```
 
-## DS - OSGi Logger
+## OSGi-CDI - Reference: target
 
 ```java
-@Reference(service = LoggerFactory.class)
-Logger logger;
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
+
+@Inject @Reference(target = "(service.vendor=Chicago JUG)")
+List<Presenter> presenters;
+```
+
+## OSGi-CDI - Reference: target `@BeanPropertyType`
+
+```java
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
+import org.osgi.service.cdi.propertytypes.ServiceVendor;
+
+@Inject @Reference @ServiceVendor("Chicago JUG")
+List<Presenter> presenters;
+```
+
+## OSGi-CDI - Reference: prototype required
+
+```java
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.MinimumCardinality;
+import org.osgi.service.cdi.annotations.PrototypeRequired;
+import org.osgi.service.cdi.annotations.Reference;
+
+@Inject @Reference @MinimumCardinality(1) @PrototypeRequired
+List<Entry<Map<String, Object>, Drink>> drinks;
+```
+
+## OSGi-CDI - Reference: any type
+
+```java
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.Reference;
+import org.osgi.service.cdi.propertytypes.ServiceVendor;
+
+@Inject @Reference(service = Reference.Any.class)
+@ServiceVendor("Chicago JUG")
+List<Object> all;
+```
+
+*... in support of **whiteboards***
+
+## OSGi-CDI - Reference: service events
+
+```java
+import javax.inject.Inject;
+
+@Inject @ServiceVendor("Chicago JUG")
+void monitorDrinks(BindServiceReference<Drink> drinks) {
+	drinks
+    .adding(this::doAdd)
+    .modified(this::doModified)
+    .removed(this::doRemoved)
+    .bind();
+}
 ```
 
 ## OSGi-CDI - OSGi Logger
 
 ```java
+import javax.inject.Inject;
+import org.osgi.service.log.Logger;
+
 @Inject
-Logger logger;
-```
-
-## DS - Configuration
-
-```java
-@Activate
-Map<String, Object> props;
+Logger video;
 ```
 
 ## OSGi-CDI - Configuration
 
 ```java
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.ComponentProperties;
+
 @Inject @ComponentProperties
-Map<String, Object> props;
+Map<String, Object> eventDetails;
 ```
 
-## Configuration Types
+## OSGi-CDI - Configuration Types
 
 ```java
+import org.osgi.service.cdi.annotations.BeanPropertyType;
+
 @Retention(RUNTIME)
-@BeanPropertyType // OSGi-CDI
-@ComponentPropertyType // DS
-public @interface Config {
-  String hostname() default "localhost";
-  int port() default 8080;
-  Config.Protocol protocol() default Config.Protocol.https;
-  
-  public enum Protocol {http, https}
+@BeanPropertyType
+public @interface Details {
+  String address();
+  String instructions();
 }
-```
-
-## DS - Configuration: typed
-
-```java
-@Activate
-Config config;
 ```
 
 ## OSGi-CDI - Configuration: typed
 
 ```java
+import javax.inject.Inject;
+import org.osgi.service.cdi.annotations.ComponentProperties;
+
 @Inject @ComponentProperties
-Config config;
-```
-
-## DS - Component
-
-```java
-@Component(
-  configurationPid = {"foo", "bar"},
-	configurationPolicy = REQUIRE)
-public class FooImpl {
-  ...
-}
+Details eventDetails;
 ```
 
 ## OSGi-CDI - Single Component
 
 ```java
+import org.osgi.service.cdi.annotations.PID;
+import org.osgi.service.cdi.annotations.SingleComponent;
+
 @SingleComponent
-@PID("foo")
-@PID(value = "bar", policy = REQUIRED)
-public class FooImpl {
-  ...
+@PID(value = "details", policy = REQUIRED)
+@Service
+public PresenterImpl implements Presenter {
+  @Inject Laptop laptop;
+  @Inject @ComponentProperties Details eventDetails;
 }
 ```
 
 ## OSGi-CDI - Factory Component
 
 ```java
-@FactoryComponent("foo")
-@PID("bar")
-public class FooImpl {
-  ...
+import org.osgi.service.cdi.annotations.PID;
+import org.osgi.service.cdi.annotations.FactoryComponent;
+
+@FactoryComponent("registration")
+@PID(value = "details", policy = REQUIRED)
+public class AttendeeImpl implements Attendee {
+  @Inject @ComponentProperties Registration registration;
+  @Inject @ComponentProperties Details eventDetails;
 }
 ```
 
