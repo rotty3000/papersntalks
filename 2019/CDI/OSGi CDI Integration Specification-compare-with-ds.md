@@ -2,8 +2,6 @@
 
 
 
-
-
 # OSGi CDI Integration Specification
 
 Raymond Augé - Sr. Software Architect
@@ -330,4 +328,3 @@ public class FooImpl {
 
 
 <footer>@rotty3000</footer>
-
